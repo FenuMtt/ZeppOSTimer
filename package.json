@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@zeppos/device-types": "^1.0.0"
+    "@zeppos/device-types": "^1.0.0",
+    "eslint": "^8.47.0",
+    "eslint-config-google": "^0.14.0"
   }
 }

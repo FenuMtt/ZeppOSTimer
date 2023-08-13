@@ -1,13 +1,13 @@
-import { seedFS } from './utils/seed'
+import { seedFS } from './utils/seed';
 
 App({
-  globalData: {},
+  globalData: {
+  },
   onCreate(options) {
-    console.log('app on create invoke')
-    seedFS()
+    seedFS();
   },
 
   onDestroy(options) {
-    console.log('app on destroy invoke')
   }
-})
+});
+

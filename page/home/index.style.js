@@ -1,6 +1,4 @@
-import { gettext } from "i18n"
-
-export const { width: DEVICE_WIDTH, height: DEVICE_HEIGHT } = hmSetting.getDeviceInfo()
+export const { width: DEVICE_WIDTH, height: DEVICE_HEIGHT } = hmSetting.getDeviceInfo();
 
 export const LIST_PARAMS = {
   x: 0,
@@ -20,5 +18,5 @@ export const LIST_PARAMS = {
       item_height: 50
     }
   ],
-  item_config_count: 1,
-}
+  item_config_count: 1
+};

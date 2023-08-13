@@ -1,42 +1,46 @@
-import { DEVICE_HEIGHT, DEVICE_WIDTH, LIST_PARAMS } from './index.style'
-import { readFromFS } from '../../utils/storage'
+import { LIST_PARAMS } from './index.style';
+// import {readFromFS} from '../../utils/storage';
 
-const logger = DeviceRuntimeCore.HmLogger.getLogger('helloworld!')
+const logger = DeviceRuntimeCore.HmLogger.getLogger('page_index');
+
+/**
+ * On item click handler
+ * @param {*} list scroll list object
+ * @param {*} index selected item index
+ */
+function scrollListItemClick(list, index) {
+  logger.log('scrollListItemClick index=' + index);
+}
 
 Page({
   state: {
-
   },
 
   onInit() {
-    logger.debug('page onInit invoked!!')
   },
 
   build() {
-
-    logger.debug('page build invoked ')
-    readFromFS();
-    
     const dataList = [
-      { name: 'pull ups' },
-      { name: 'hangs' },
-      { name: 'other shit' }
-    ]
-    
-    function scrollListItemClick(list, index) {
-      console.log('scrollListItemClick index=' + index)
-    }
+      {
+        name: 'pull ups'
+      },
+      {
+        name: 'hangs'
+      },
+      {
+        name: 'other shit'
+      }
+    ];
+
 
     hmUI.createWidget(hmUI.widget.SCROLL_LIST, {
       ...LIST_PARAMS,
       data_array: dataList,
       data_count: dataList.length,
-      item_click_func: scrollListItemClick,
-    })
+      item_click_func: scrollListItemClick
+    });
   },
-  
 
   onDestroy() {
-    logger.debug('page onDestroy invoked')
-  },
-})
+  }
+});
